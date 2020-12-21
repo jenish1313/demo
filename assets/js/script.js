@@ -1,48 +1,48 @@
-//================================Start Practice====================================//    
+// //================================Start Practice====================================//    
 
-let dataObj = {
-    name: 'Jenish',
-    age: 21,
-    look: {
-        eye: 'blue',
-        skin: 'Indian'
-    }
-}
+// let dataObj = {
+//     name: 'Jenish',
+//     age: 21,
+//     look: {
+//         eye: 'blue',
+//         skin: 'Indian'
+//     }
+// }
 
-//console.log(dataObj.look);
+// //console.log(dataObj.look);
 
-// let dataClone = cloneObject({}, dataObj);
+// // let dataClone = cloneObject({}, dataObj);
+// // console.log(dataClone);
+// let dataClone = cloneDeep(dataObj); 
 // console.log(dataClone);
-let dataClone = cloneDeep(dataObj); 
-console.log(dataClone);
 
-function cloneDeep(obj){
-    let clone = {}
-    for (let key in obj){
-        if (typeof obj[key] === "object"){
-            clone[key] = cloneDeep(obj[key]);
-            console.log(clone[key]);
-        }else {
-            clone[key] = obj[key];
-        }
-    }
-    return clone;
-}
+// function cloneDeep(obj){
+//     let clone = {}
+//     for (let key in obj){
+//         if (typeof obj[key] === "object"){
+//             clone[key] = cloneDeep(obj[key]);
+//             console.log(clone[key]);
+//         }else {
+//             clone[key] = obj[key];
+//         }
+//     }
+//     return clone;
+// }
 
 
 
-function cloneObject(clone, object) {
-    for (let key in object) {
-    if (typeof object[key] === "object") {
-    clone[key] = cloneObject(object[key], {});
-    } else {
-    clone[key] = object[key];
-    }
-    }
-    return clone;
-    }
+// function cloneObject(clone, object) {
+//     for (let key in object) {
+//     if (typeof object[key] === "object") {
+//     clone[key] = cloneObject(object[key], {});
+//     } else {
+//     clone[key] = object[key];
+//     }
+//     }
+//     return clone;
+//     }
 
-//================================End Practice======================================//    
+//=================================End Practice======================================//    
 
 // SLIDER
 $(document).ready(function() {
